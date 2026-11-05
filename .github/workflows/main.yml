@@ -35,8 +35,8 @@ jobs:
           rm -rf lib assets
           cp -r ../keep/lib ../keep/assets ../keep/pubspec.yaml .
           sed -i 's/android:label="[^"]*"/android:label="QR PiX"/' android/app/src/main/AndroidManifest.xml
-          sed -i 's/flutter.compileSdkVersion/35/' android/app/build.gradle.kts 2>/dev/null || true
-          sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 35/' android/app/build.gradle 2>/dev/null || true
+          sed -i 's/flutter.compileSdkVersion/36/' android/app/build.gradle.kts 2>/dev/null || true
+          sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/' android/app/build.gradle 2>/dev/null || true
           flutter pub get
 
       - name: Build debug APK
